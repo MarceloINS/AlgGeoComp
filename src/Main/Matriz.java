@@ -5,14 +5,14 @@ public class Matriz {
     private int linhas;
     private final Integer[][] elementos;
 
-    public Matriz(int colunas, int linhas, Integer[][] elementos) {
+    public Matriz(int linhas, int colunas, Integer[][] elementos) {
         this.colunas = colunas;
         this.linhas = linhas;
         this.elementos = elementos;
     }
 
-    public int getElemento(int coluna, int linha) {
-        return elementos[coluna][linha];
+    public int getElemento(int linha, int coluna) {
+        return elementos[linha][coluna];
     }
 
     public void setElemento(int elemento, int linha, int coluna) {
