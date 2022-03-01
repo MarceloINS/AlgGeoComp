@@ -7,5 +7,4 @@ public class Vetor extends Matriz{
 
     public int getElemento(int coluna) { return getElemento(1, coluna); }
 
-
 }
