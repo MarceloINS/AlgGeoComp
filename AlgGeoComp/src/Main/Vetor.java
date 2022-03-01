@@ -1,10 +1,10 @@
 package Main;
 
 public class Vetor extends Matriz{
-    public Vetor( int colunas, Integer[][] elementos) {
-        super(colunas, 1, elementos);
+    public Vetor( int linha, Integer[][] elementos) {
+        super(linha, 1, elementos);
     }
 
-    public int getElemento(int coluna) { return getElemento(1, coluna); }
+    public int getElemento(int linha) { return getElemento(linha, 1); }
 
 }

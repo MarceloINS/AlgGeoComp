@@ -1,43 +1,24 @@
 package Main;
-import java.util.Random;
+import auxiliares.AuxMatriz;
+
 
 public class Main {
 
     public static void main(String[] args) {
 
         int linha = 3, coluna = 3;
-        Integer[][] elementos = new Integer[linha][coluna];
-        Matriz matriz = new Matriz(linha, coluna, elementos);
         LinearAlgebra linearAlgebra = new LinearAlgebra();
+        AuxMatriz auxMatriz = new AuxMatriz();
 
-        for (int i = 0; i < matriz.getLinha(); i++) {
-            for (int j = 0; j < matriz.getColuna(); j++) {
-                matriz.setElemento(new Random().nextInt(100) + 1, i, j);
-            }
-        }
+        Matriz matriz = auxMatriz.createMatrix(linha, coluna);
 
-        for (int i = 0; i < matriz.getLinha(); i++) {
-            for (int j = 0; j < matriz.getColuna(); j++) {
-                if (j == (matriz.getColuna() - 1)) {
-                    System.out.println(matriz.getElemento(i, j));
-                } else {
-                    System.out.print(matriz.getElemento(i, j) + " ");
-                }
-            }
-        }
+        auxMatriz.exibir(matriz);
 
         System.out.println();
         System.out.println();
+
         Matriz a = linearAlgebra.transpose(matriz);
 
-        for (int i = 0; i < a.getLinha(); i++) {
-            for (int j = 0; j < a.getColuna(); j++) {
-                if (j == (a.getColuna() - 1)) {
-                    System.out.println(a.getElemento(i, j));
-                } else {
-                    System.out.print(a.getElemento(i, j) + " ");
-                }
-            }
-        }
+        auxMatriz.exibir(a);
     }
 }

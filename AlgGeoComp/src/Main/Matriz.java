@@ -1,8 +1,8 @@
 package Main;
 
 public class Matriz {
-    private int colunas;
-    private int linhas;
+    private final int colunas;
+    private final int linhas;
     private final Integer[][] elementos;
 
     public Matriz(int linhas, int colunas, Integer[][] elementos) {
@@ -15,24 +15,12 @@ public class Matriz {
         return elementos[linha][coluna];
     }
 
-    public void setElemento(int elemento, int linha, int coluna) {
-        elementos[linha][coluna] = elemento;
-    }
-
     public int getColuna() {
         return colunas;
     }
 
     public int getLinha() {
         return linhas;
-    }
-
-    public void setColuna(int coluna) {
-        this.colunas = coluna;
-    }
-
-    public void setLinha(int linha) {
-        this.linhas = linha;
     }
 
 }
