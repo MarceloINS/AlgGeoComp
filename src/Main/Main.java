@@ -10,13 +10,11 @@ public class Main {
         Matriz matriz = new Matriz(linha, coluna, elementos);
         LinearAlgebra linearAlgebra = new LinearAlgebra();
 
-
         for (int i = 0; i < matriz.getLinha(); i++) {
             for (int j = 0; j < matriz.getColuna(); j++) {
                 matriz.setElemento(new Random().nextInt(100) + 1, i, j);
             }
         }
-
 
         for (int i = 0; i < matriz.getLinha(); i++) {
             for (int j = 0; j < matriz.getColuna(); j++) {
@@ -27,7 +25,6 @@ public class Main {
                 }
             }
         }
-
 
         System.out.println();
         System.out.println();
