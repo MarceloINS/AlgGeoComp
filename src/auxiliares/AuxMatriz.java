@@ -22,7 +22,7 @@ public class AuxMatriz {
         Integer[][] elementos = new Integer[linha][coluna];
         for(int i = 0; i < linha; i++) {
             for(int j = 0; j < coluna; j++) {
-                elementos[i][j] = new Random().nextInt(100) + 1;
+                elementos[i][j] = new Random().nextInt(10) + 1;
             }
         }
         return elementos;
