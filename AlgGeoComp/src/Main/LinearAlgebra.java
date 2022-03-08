@@ -63,4 +63,22 @@ public class LinearAlgebra {
             return new Matriz(a.getLinha(), a.getColuna(), elementos);
         }
     }
+
+    public Matriz dot(Matriz a, Matriz b) {
+        Integer[][] elementos = new Integer[a.getLinha()][b.getColuna()];
+        if(a.getColuna() == b.getLinha()) {
+
+            for(int i = 0; i < elementos.length; i++) {int aux = 0;
+                for(int j = 0; j < elementos[i].length; j++) {
+
+                    for(int k = 0; k < a.getColuna(); k++) {
+                          aux = aux +  a.getElemento(j,k) * b.getElemento(k,j);
+                    }
+                    elementos[i][j] = aux;
+                }
+            }
+        } else {throw new Error("O numero de colunas da primeira matriz precisam ser igual ao numero de linhas da segunda matriz");}
+
+        return new Matriz(a.getLinha(), b.getColuna(), elementos);
+    }
 }
