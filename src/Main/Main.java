@@ -11,33 +11,28 @@ public class Main {
         AuxMatriz auxMatriz = new AuxMatriz();
 
         /*Matriz matriz = auxMatriz.createMatrix(linha, coluna);
-
         auxMatriz.exibir(matriz);
-
         System.out.println();
         System.out.println();
-
         Matriz a = linearAlgebra.transpose(matriz);
-
         auxMatriz.exibir(a);
-
         System.out.println();
         System.out.println();*/
 
 
-        Matriz b = auxMatriz.createMatrix(linha, coluna);
+        Matriz b = auxMatriz.createMatrix(3, 2);
         auxMatriz.exibir(b);
 
         System.out.println();
         System.out.println();
 
-        Matriz c = auxMatriz.createMatrix(linha, coluna);
+        Matriz c = auxMatriz.createMatrix(2, 3);
         auxMatriz.exibir(c);
 
         System.out.println();
         System.out.println();
-
-        //auxMatriz.exibir(linearAlgebra.sum(b,c));
+/*
+        auxMatriz.exibir(linearAlgebra.sum(b,c));
 
         System.out.println();
         System.out.println();
@@ -48,7 +43,8 @@ public class Main {
         System.out.println();
 
         auxMatriz.exibir(linearAlgebra.times(b, c));
-
+*/
+        auxMatriz.exibir(linearAlgebra.dot(b,c));
 
     }
 }
